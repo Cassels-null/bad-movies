@@ -5,7 +5,7 @@ var scribe = {
     getGenres : (req, res)=>{
         axios.get('https://api.themoviedb.org/3/genre/movie/list?api_key='+API_KEY)
         .then((result)=>{
-            res.send(result.data);
+            res.send(result.data.genres);
         })
         .catch((err)=>{
             console.log("ERROR at scribe.getGenres: "+err)
