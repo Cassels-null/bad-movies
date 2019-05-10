@@ -18,10 +18,16 @@ html, body {
 #sidebar {
     height: 100%;
     width: 10%;
-    background-color: blueviolet;
+    background-color: darkslategray;
+    /* background-color: rgb(97, 47, 6); */
+    /* background-color: blueviolet; */
+    color: white;
+    text-align: center;
+    margin: auto;
     float: left;
     margin: 0px;
     padding: 0px;
+    padding-top: 40px;
 }
 
 #movieList {
@@ -39,6 +45,7 @@ html, body {
 .movieCard{
     background-color: rgb(173, 74, 3);
     border-style: solid;
+    border-radius: 5px;
     margin: 20px;
     width: 200px;
     /* padding: 15px; */
@@ -51,9 +58,11 @@ html, body {
 
 .movieTitle{
     background-color: chocolate;
-    padding-left: 10px;
+    text-align: center;
     font-weight: bold;
-    height: 20px;
+    /* height: 50px; */
+    padding-top: 2px;
+    margin-top: -4px;
     /* text-overflow: ellipsis; */
 }
 
