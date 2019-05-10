@@ -2,8 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 import Sidebar from './sideBar.jsx'
-// import helpers from './apiHelpers.jsx';
-
+import MovieList from './movieList.jsx'
 
 //react setup
 class App extends React.Component {
@@ -45,8 +44,8 @@ class App extends React.Component {
     render(){
         return(
             <div id="main">
-                this is filler
                 <Sidebar genres={this.state.genres} getMovies={this.getMovies}/>
+                <MovieList movies={this.state.movies}/>
             </div>
         )
     }
