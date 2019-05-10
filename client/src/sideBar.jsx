@@ -10,10 +10,23 @@ class Sidebar extends React.Component {
         this.state = {}
     }
 
+    changeGenre(){
+        console.log(document.getElementById("selectGenre").value);
+        this.props.getMovies(document.getElementById("selectGenre").value);
+    }
 
     render(){
         return(
-            <div id="sidebar">meep meep!</div>
+            <div id="sidebar" onChange={(e)=>{e.preventDefault(); this.changeGenre()}}>
+                Select Genre
+                <form>
+                    <select id="selectGenre">
+                    {this.props.genres.map((ele)=>{return(
+                        <option value={ele.id}>{ele.name}</option>
+                    )})}
+                    </select>
+                </form>
+            </div>
         )
     }
 }

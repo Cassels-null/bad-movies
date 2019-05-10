@@ -1270,9 +1270,13 @@ function (_React$Component) {
 
     _this.state = {
       movies: [],
-      genres: [18]
+      genres: [{
+        id: 1,
+        name: "Action"
+      }]
     };
     _this.getGenreList = _this.getGenreList.bind(_assertThisInitialized(_this));
+    _this.getMovies = _this.getMovies.bind(_assertThisInitialized(_this));
     return _this;
   } //gets genre list from server and saves it to state
 
@@ -1287,7 +1291,22 @@ function (_React$Component) {
           genres: results.data
         });
       })["catch"](function (err) {
-        console.log("ERROR at apiHelpers.getGenres: " + err);
+        console.log("ERROR at App.getGenres: " + err);
+      });
+    } //gets list of bad movie of a genre, and asves it to state
+
+  }, {
+    key: "getMovies",
+    value: function getMovies(genre_id) {
+      var _this3 = this;
+
+      console.log(genre_id);
+      __WEBPACK_IMPORTED_MODULE_2_axios___default.a.get('http://127.0.0.1:1337/movies?genre_id=' + genre_id).then(function (results) {
+        _this3.setState({
+          movies: results.data
+        });
+      })["catch"](function (err) {
+        console.log("ERROR at App.getMovies: " + err);
       });
     } //when page is loaded, get genre list from server and save it to state
 
@@ -1301,7 +1320,10 @@ function (_React$Component) {
     value: function render() {
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         id: "main"
-      }, "this is filler", __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__sideBar_jsx__["a" /* default */], null));
+      }, "this is filler", __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__sideBar_jsx__["a" /* default */], {
+        genres: this.state.genres,
+        getMovies: this.getMovies
+      }));
     }
   }]);
 
@@ -27014,11 +27036,30 @@ function (_React$Component) {
   }
 
   _createClass(Sidebar, [{
+    key: "changeGenre",
+    value: function changeGenre() {
+      console.log(document.getElementById("selectGenre").value);
+      this.props.getMovies(document.getElementById("selectGenre").value);
+    }
+  }, {
     key: "render",
     value: function render() {
+      var _this2 = this;
+
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
-        id: "sidebar"
-      }, "meep meep!");
+        id: "sidebar",
+        onChange: function onChange(e) {
+          e.preventDefault();
+
+          _this2.changeGenre();
+        }
+      }, "Select Genre", __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("form", null, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("select", {
+        id: "selectGenre"
+      }, this.props.genres.map(function (ele) {
+        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option", {
+          value: ele.id
+        }, ele.name);
+      }))));
     }
   }]);
 
