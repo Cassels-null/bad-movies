@@ -1293,7 +1293,7 @@ function (_React$Component) {
       })["catch"](function (err) {
         console.log("ERROR at App.getGenres: " + err);
       });
-    } //gets list of bad movie of a genre, and asves it to state
+    } //gets list of bad movies of a genre, and saves it to state
 
   }, {
     key: "getMovies",
@@ -27033,7 +27033,8 @@ function (_React$Component) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Sidebar).call(this, props));
     _this.state = {};
     return _this;
-  }
+  } //get list of movies from server, and save to state of App
+
 
   _createClass(Sidebar, [{
     key: "changeGenre",

@@ -10,6 +10,7 @@ class Sidebar extends React.Component {
         this.state = {}
     }
 
+    //get list of movies from server, and save to state of App
     changeGenre(){
         console.log(document.getElementById("selectGenre").value);
         this.props.getMovies(document.getElementById("selectGenre").value);
@@ -20,7 +21,7 @@ class Sidebar extends React.Component {
             <div id="sidebar" onChange={(e)=>{e.preventDefault(); this.changeGenre()}}>
                 Select Genre
                 <form>
-                    <select id="selectGenre">
+                    <select id="selectGenre">{/* list all genres as options */}
                     {this.props.genres.map((ele)=>{return(
                         <option value={ele.id}>{ele.name}</option>
                     )})}

@@ -27,7 +27,7 @@ class App extends React.Component {
         .catch((err)=>{console.log("ERROR at App.getGenres: "+err)});
     }
 
-    //gets list of bad movie of a genre, and asves it to state
+    //gets list of bad movies of a genre, and saves it to state
     getMovies(genre_id){
         console.log(genre_id);
         axios.get('http://127.0.0.1:1337/movies?genre_id='+genre_id)
