@@ -12,7 +12,7 @@ var scribe = {
         })
     },
     getMovies : (req, res)=>{
-        axios.get('https://api.themoviedb.org/3/discover/movie?sort_by=populerity.asc&vote_count=2&with_genres='+req.headers.genre_id+'&api_key='+API_KEY)
+        axios.get('https://api.themoviedb.org/3/discover/movie?sort_by=populerity.asc&vote_count=2&with_genres='+req.query.genre_id+'&api_key='+API_KEY)
         .then((result)=>{
             res.send(result.data);
         })
