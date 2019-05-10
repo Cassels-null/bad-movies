@@ -37,11 +37,30 @@ html, body {
 }
 
 .movieCard{
+    background-color: rgb(173, 74, 3);
     border-style: solid;
     margin: 20px;
+    width: 200px;
     /* padding: 15px; */
 }
 
 .poster {
+    width: 200px;
     height: 300px;
+}
+
+.movieTitle{
+    background-color: chocolate;
+    padding-left: 10px;
+    font-weight: bold;
+    height: 20px;
+    /* text-overflow: ellipsis; */
+}
+
+.movieOverview {
+    font-size: 80%;
+    max-height: 150px;
+    text-overflow: ellipsis;
+    /* overflow-y: auto; */
+    overflow-y: hidden;
 }

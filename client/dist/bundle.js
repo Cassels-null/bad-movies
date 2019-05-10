@@ -27185,10 +27185,14 @@ function (_React$Component) {
     value: function render() {
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "movieCard"
-      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", null, this.props.movie.title), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+        className: "movieTitle"
+      }, this.props.movie.title), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
         className: "poster",
         src: "https://image.tmdb.org/t/p/original" + this.props.movie.poster_path
-      }));
+      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+        className: "movieOverview"
+      }, this.props.movie.overview));
     }
   }]);
 
