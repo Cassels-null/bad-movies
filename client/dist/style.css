@@ -27,13 +27,20 @@ html, body {
     float: left;
     margin: 0px;
     padding: 0px;
+}
+
+#sideTitle {
     padding-top: 40px;
+    font-size: 150%;
+    margin-bottom: 30px;
+    font-weight: bolder;
 }
 
 #movieList {
     height: 100%;
     width: 90%;
-    background-color: brown;
+    background-color: rgb(48, 129, 48);
+    /* background-color: brown; */
     margin: 0px;
     padding: 0px;
     display: flex;
@@ -43,7 +50,8 @@ html, body {
 }
 
 .movieCard{
-    background-color: rgb(173, 74, 3);
+    background-color: slategray;
+    /* background-color: rgb(173, 74, 3); */
     border-style: solid;
     border-radius: 5px;
     margin: 20px;
@@ -57,7 +65,8 @@ html, body {
 }
 
 .movieTitle{
-    background-color: chocolate;
+    background-color: rgb(67, 112, 112);
+    /* background-color: chocolate; */
     text-align: center;
     font-weight: bold;
     /* height: 50px; */
