@@ -19,6 +19,7 @@ class Sidebar extends React.Component {
     render(){
         return(
             <div id="sidebar" onChange={(e)=>{e.preventDefault(); this.changeGenre()}}>
+                <div id="sideTitle">BAD MOVIES</div>
                 Select Genre
                 <form>
                     <select id="selectGenre">{/* list all genres as options */}

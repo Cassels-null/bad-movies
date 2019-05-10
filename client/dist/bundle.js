@@ -27058,7 +27058,9 @@ function (_React$Component) {
 
           _this2.changeGenre();
         }
-      }, "Select Genre", __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("form", null, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("select", {
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
+        id: "sideTitle"
+      }, "BAD MOVIES"), "Select Genre", __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("form", null, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("select", {
         id: "selectGenre"
       }, this.props.genres.map(function (ele) {
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option", {
