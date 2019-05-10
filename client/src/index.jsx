@@ -39,6 +39,7 @@ class App extends React.Component {
     //when page is loaded, get genre list from server and save it to state
     componentDidMount(){
         this.getGenreList();
+        this.getMovies(28);
     }
 
     render(){

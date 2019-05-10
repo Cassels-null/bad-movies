@@ -1315,6 +1315,7 @@ function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       this.getGenreList();
+      this.getMovies(28);
     }
   }, {
     key: "render",
