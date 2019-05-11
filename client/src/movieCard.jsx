@@ -8,6 +8,8 @@ class MovieCard extends React.Component {
     }
 
     render(){
+        //renders a rectangle displaying movie information
+        //shows movie poster, movie name, and brief synopsis
         return(
             <div className="movieCard">
                 <img className="poster" 

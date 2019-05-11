@@ -27185,6 +27185,8 @@ function (_React$Component) {
   _createClass(MovieCard, [{
     key: "render",
     value: function render() {
+      //renders a rectangle displaying movie information
+      //shows movie poster, movie name, and brief synopsis
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "movieCard"
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
